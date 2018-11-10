@@ -9,7 +9,10 @@ class PostsNew extends Component {
     
     onSubmit(values) {
         // console.log(values);
-        this.props.createPosts(values);
+        // this.props.history.push('/');
+        this.props.createPosts(values, () => {
+            this.props.history.push('/');
+        });
     }
 
     renderField(field) {
