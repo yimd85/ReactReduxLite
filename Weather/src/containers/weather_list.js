@@ -9,7 +9,9 @@ class WeatherList extends Component {
 
         const name = cityData.city.name;
         const temps = cityData.list.map(weather => {return weather.main.temp});
-        // console.log(temps);
+        console.log(temps);
+        const date = cityData.list.map(weather => {return weather.dt_txt});
+        console.log(date);
 
         const pressures = cityData.list.map(weather => {return weather.main.pressure});
         const humidities = cityData.list.map(weather => {return weather.main.humidity});
